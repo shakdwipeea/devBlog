@@ -116,4 +116,16 @@ router.get('/secure/prof',function  (req,res) {
 	console.log('Reques',req.user.name);
 	res.json(req.user.name);
 });
+
+
+router.post('/users',function  (req,res) {
+	// body...
+	console.log('Request body',req.body);
+	User.findOne({'name': req.body.name},'name',function  (err,user) {
+		if (!user) {res.json({result:true});}
+		else {
+			res.json({result:false});
+		}
+	})
+});
 module.exports = router;

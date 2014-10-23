@@ -53,13 +53,20 @@ angular.module('BlogApp')
 		})
 		.error(function  (data,status,headers,config) {
 			// body...
-			
+
 		});
+	}
+
+	var getUsers = function  (username) {
+		// body...
+		console.log('In getUsers');
+		return $http.post('/users',{name: username});
 	}
 	return {
 		signin: signin,
 		auth: auth,
 		logout: logout,
-		signup: signup
+		signup: signup,
+		getUsers: getUsers
 	};
 });
