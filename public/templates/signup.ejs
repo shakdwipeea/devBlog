@@ -18,11 +18,16 @@
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-4">
 									<div class="normal-signup" ng-init="duplicate = 'true'">
-										<form>
+										<form ng-init="duplicateEmail = 'true'">
 										  <div class="form-group">
+										  <p class="bg-warning err" ng-hide="duplicateEmail">{{message}}</p>
 										    <input type="text" ng-blur="checkUsername()" class="form-control" placeholder="Name" required="required" ng-model="user.name">
-										    <span ng-hide='duplicate' ng-style="{color:'yellow'}" class="glyphicon glyphicon-remove form-control-feedback"></span>
-										    <input type="email" class="form-control" placeholder="Email" required="required" ng-model='user.email'>
+										     <span ng-hide='duplicate' ng-style="{color:'yellow'}" class="glyphicon glyphicon-remove form-control-feedback"></span>	
+										    
+										    <input type="email" ng-blur="checkEmail()" class="form-control" placeholder="Email" required="required" ng-model='user.email'/>
+										   
+
+										    
 										    <input type="password" class="form-control" placeholder="Password" required="required" ng-model='user.password'>
 										  </div>
 											<div class="row">
@@ -30,7 +35,7 @@
 													<a href="#password_recovery" id="forgot_from_3">need help?</a>
 												</div> 
 												<div class="col-md-5 col-md-offset-7">
-													<button type="submit" ng-disabled="!duplicate" ng-click="signup()" class="btn btn-block signup">Sign Up</button>
+													<button type="submit" ng-disabled="!duplicate || !duplicateEmail" ng-click="signup()" class="btn btn-block signup">Sign Up</button>
 												</div>
 											</div>
 										</form>

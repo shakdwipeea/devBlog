@@ -1,4 +1,4 @@
-angular.module('BlogApp',['ui.router'])
+angular.module('BlogApp',['ui.router','textAngular','ngSanitize'])
 
 
 .config(function  ($stateProvider,$urlRouterProvider,$httpProvider) {

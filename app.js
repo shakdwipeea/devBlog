@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var jwt = require('jsonwebtoken');
-
+var crypto = require('crypto');
 //Connect to mongodb
 var mongoose = require('mongoose');
 //Db Connection
@@ -39,9 +39,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.json());
 //app.use(express.urlencoded());
 
+app.use(function (req, res, next) {
+    console.log('In my middleware',req.body.password);
+        if(req.body.password != undefined) {
+            crypto.pbkdf2(req.body.password, 'MySecretSalt', 10, 30, function (err, key) {
+                if (err) {
+                    console.log(err);
+                    next(err);
+                }
+                req.body.password = key.toString('hex');
+                console.log(req.body.password);
+                next();
+            });
+        } else {next();}
+
+});
+
 app.use('/secure',expressJwt({secret:'secret'}));
 app.use('/', routes);
 app.use('/users', users);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -17,10 +17,10 @@ angular.module('BlogApp')
 					$rootScope.name = data;
 					console.log(data);
 					$window.sessionStorage.username = data;
-
+					$state.go('home');
 				});
 
-				$state.go('home');
+				
 
 			})
 			.error(function  (data,status,headers,config) {

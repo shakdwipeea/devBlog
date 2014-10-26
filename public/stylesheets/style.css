@@ -1,4 +1,4 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -9,4 +9,22 @@ a {
 
 .newpost {
 	background-color: #eaeaea;
+}*/
+
+.err {
+	background-color:#333333;
+	color: white;
 }
+
+
+   .font-bold.bold{font-weight:bold;}.italic{font-style:italic;}.selected{background-color: orange;}#openpb{margin:15px;}
+
+.ta-editor {
+    min-height: 300px;
+    height: auto;
+    overflow: auto;
+    font-family: inherit;
+    font-size: 100%;
+    margin:20px 0;
+}
+

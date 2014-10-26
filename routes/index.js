@@ -4,7 +4,7 @@ var expressJwt = require('express-jwt');
 var jwt = require('jsonwebtoken');
 
 var mongoose = require('mongoose');
-
+var crypto = require('crypto');
 var Post = mongoose.model('Post');
 var Comments = mongoose.model('Comment');
 var User = mongoose.model('User');
@@ -20,7 +20,11 @@ router.param('post',function  (req,res,next,id) {
 		return next();
 	});
 
-})
+});
+
+
+
+//router.use(hashpassword());
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -32,7 +36,14 @@ router.get('/posts',function  (req,res,next) {
 	Post.find(function  (err,posts) {
 		if (err) {return next(err);}
 		res.json(posts);
+	});
+});
 
+router.get('/postof/:name',function  (req,res) {
+	console.log('Got',req.params.name);
+	Post.find({'author':req.params.name},function  (err,posts) {
+		if (err) {next(err);};
+		res.json(posts);
 	});
 });
 
@@ -102,7 +113,8 @@ router.post('/authenticate',function  (req,res) {
 });
 
 router.post('/newuser',function  (req,res) {
-	if (req.body) { 
+	if (req.body) {
+
 		var user = new User(req.body);
 		user.save(function  (err,user) {
 			if (err) {return next(err)};
