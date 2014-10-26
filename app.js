@@ -10,7 +10,7 @@ var crypto = require('crypto');
 //Connect to mongodb
 var mongoose = require('mongoose');
 //Db Connection
-mongoose.connect('mongodb://localhost/blog');
+mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGO_DB_PORT/blog');
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users')
