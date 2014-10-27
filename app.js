@@ -13,8 +13,8 @@ var mongoose = require('mongoose');
 
 var app = express();
 //Db Connection
-app.set('MongodbHost',process.env.$OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
-app.set('MongodbPort',process.env.$OPENSHIFT_MONGODB_DB_PORT || '');
+app.set('MongodbHost',process.env.OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
+app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog');
 require('./models/Posts');
 require('./models/Comments');
