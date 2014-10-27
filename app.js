@@ -16,17 +16,13 @@ var app = express();
 app.set('MongodbHost',process.env.OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
 app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 
-var options = {};
-
-if (process.env.OPENSHIFT_MONGODB_HOST) {
-    options = {
-        user:'admin',
-        pass:'sS7zTAwzYmwY'
-    }
-};
 
 
-mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',options);
+
+mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',{
+  user:'admin',
+  pass:'sS7zTAwzYmwY'
+});
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users')
