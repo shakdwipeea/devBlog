@@ -1,4 +1,4 @@
-angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loading-bar'])
+angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loading-bar','ngAnimate'])
 
 
 .config(function  ($stateProvider,$urlRouterProvider,$httpProvider,cfpLoadingBarProvider) {
