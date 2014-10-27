@@ -9,9 +9,6 @@ var jwt = require('jsonwebtoken');
 var crypto = require('crypto');
 //Connect to mongodb
 var mongoose = require('mongoose');
-
-
-var app = express();
 //Db Connection
 app.set('MongodbHost',process.env.$OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
 app.set('MongodbPort',process.env.$OPENSHIFT_MONGODB_DB_PORT || '');
@@ -26,6 +23,7 @@ var users = require('./routes/users');
 
 
 
+var app = express();
 
 
 
