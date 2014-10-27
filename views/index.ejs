@@ -41,6 +41,10 @@
 
 <body ng-app='BlogApp' ng-controller='MainController'>
 
+
+    <!--<div class="splash" ng-cloak=""><img src="/images/ajax-loader.gif"></div>-->
+     <div class="loading-spiner-holder" data-loading ><div class="loading-spiner"><img src="/images/ajax-loader.gif" /></div></div> 
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -148,7 +152,7 @@
 	<script type="text/javascript" src='/javascripts/controllers/MainController.js'></script>
 	<script type="text/javascript" src='/javascripts/controllers/SignUpController.js'></script>
     <script type="text/javascript" src='/javascripts/texteditor.js'></script>
-
+    <script type="text/javascript" src="/javascripts/directive/loading.js"></script>
 
     <!-- editor -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.1/textAngular.min.js"></script>
