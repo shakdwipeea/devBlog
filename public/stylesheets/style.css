@@ -62,3 +62,10 @@ color:white;
 .hide {
   display: none;
 }
+
+.load {
+  z-index: 10000;
+  position: fixed;
+  width: 1366px;
+  height: 700px;
+}
