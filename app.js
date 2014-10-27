@@ -17,7 +17,7 @@ app.set('MongodbHost',process.env.OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
 app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',{
   user:'admin',
-  password:'sS7zTAwzYmwY'
+  pass:'sS7zTAwzYmwY'
 });
 require('./models/Posts');
 require('./models/Comments');
