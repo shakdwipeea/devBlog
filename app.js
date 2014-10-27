@@ -22,10 +22,7 @@ app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 }*/
 
 
-mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',{
-  user:'admin',
-  pass:'sS7zTAwzYmwY'
-});
+mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog');
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users')
