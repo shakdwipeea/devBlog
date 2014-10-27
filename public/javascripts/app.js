@@ -1,7 +1,7 @@
 angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loading-bar'])
 
 
-.config(function  ($stateProvider,$urlRouterProvider,$httpProvider) {
+.config(function  ($stateProvider,$urlRouterProvider,$httpProvider,cfpLoadingBarProvider) {
 	// body...
 	$urlRouterProvider.otherwise('/home');
 
@@ -46,5 +46,7 @@ angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loadin
 		})
 		;
 		$httpProvider.interceptors.push('authInterceptor');
+
+		 cfpLoadingBarProvider.includeSpinner = false;
 
 });
