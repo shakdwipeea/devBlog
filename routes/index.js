@@ -33,7 +33,7 @@ router.get('/', function(req, res) {
 
 /*Get The posts */
 router.get('/posts',function  (req,res,next) {
-	Post.find(function  (err,posts) {
+	Post.find({},null,{sort:{date: -1}},function  (err,posts) {
 		if (err) {return next(err);}
 		res.json(posts);
 	});
@@ -41,7 +41,7 @@ router.get('/posts',function  (req,res,next) {
 
 router.get('/postof/:name',function  (req,res) {
 	console.log('Got',req.params.name);
-	Post.find({'author':req.params.name},function  (err,posts) {
+	Post.find({'author':req.params.name},null,{sort:{date: -1}},function  (err,posts) {
 		if (err) {next(err);};
 		res.json(posts);
 	});
