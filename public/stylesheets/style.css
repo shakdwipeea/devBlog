@@ -70,3 +70,10 @@ color:white;
   height: 20px;
   bottom: 0px;
 }
+
+.al {
+  background-color: #373746;
+  border: none;
+  text-align: center;
+  color: yellow;
+}

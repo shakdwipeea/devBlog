@@ -26,9 +26,14 @@ angular.module('BlogApp')
 
 	content.create = function  (Post) {
 		// body...
-		return $http.post('/secure/posts',Post).success(function  (data) {
+		 return $http.post('/secure/posts',Post)
+		 .success(function  (data) {
 			content.posts.push(data);
-		});
+		 })
+		 .error(function  (data,status,headers,config) {
+		 	console.log(data);
+		 })
+		 ;
 	}
 	return {
 		content: content

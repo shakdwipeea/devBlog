@@ -8,6 +8,8 @@ var crypto = require('crypto');
 var Post = mongoose.model('Post');
 var Comments = mongoose.model('Comment');
 var User = mongoose.model('User');
+var fs = require('fs');
+
 
 router.param('post',function  (req,res,next,id) {
 	var query = Post.findById(id);
@@ -54,14 +56,19 @@ router.get('/posts/:post',function  (req,res) {
 	
 });
 
-router.post('/secure/posts',function  (req,res,next) {
+router.post('/secure/posts',function  (req,res) {
 	var post = new Post(req.body);
+	console.log(Object.keys(req.user));
+	if (req.user.verified == false) {
+		res.status(401).send('Please veify your account to add a post');
+	} else if (req.user.verified == true) {
+		post.save(function  (err,post) {
+			if (err) {return next(err);}
 
-	post.save(function  (err,post) {
-		if (err) {return next(err);}
-
-		res.json(post);
-	});
+			res.json(post);
+		});
+	}
+	
 });
 
 router.post('/posts/:post/comments',function  (req,res,next) {
@@ -81,28 +88,16 @@ router.post('/posts/:post/comments',function  (req,res,next) {
 
 router.post('/authenticate',function  (req,res) {
 	console.log('Authenticating',req.body);
-	/*
-	if (!(req.body.username == 'akash' && req.body.password == 'akash')) {
-		console.log('Wrong username');
-		res.send(401,'Wrong username or password');
-		return;
-	}
-
-	var profile = {
-		name: 'Akash Shakdwipeea',
-		email: 'ashakdwipeea@gmail.com',
-		id:1
-	};
-	*/
 
 	if (!req.body) {throw new Error('Incorrect params');};
 
-	User.findOne({'name':req.body.username,'password':req.body.password},'name email',function  (err,user) {
+	User.findOne({'name':req.body.username,'password':req.body.password},'name email verified',function  (err,user) {
 		if (!user) {
 			res.status(401).send('No user found');
 		} else {
 
 		console.log(err);
+		console.log(user);
 		var token = jwt.sign(user,'secret',{expiresInMinutes: 60*5});
 		console.log('Sending token');
 		res.json({token:token});
@@ -114,12 +109,24 @@ router.post('/authenticate',function  (req,res) {
 
 router.post('/newuser',function  (req,res) {
 	if (req.body) {
-
+		req.body.verified = false;
 		var user = new User(req.body);
 		user.save(function  (err,user) {
 			if (err) {return next(err)};
 			res.json(user);
+			User.findOne({'name':req.body.name},'_id email',function  (err,user) {
+				if (err) {console.log(err);return;}
+				console.log('User id should be here',user._id);
+				//send a mail to the user 
+
+				require('../lib/mailer')(user.email,'http://blog-shak.rhcloud.com/verify/?_id='+user._id);
+
+				fs.writeFile('./verify.txt','http://blog-shak.rhcloud.com/verify/?_id='+user._id,function  (err) {
+					console.log(err);
+				});
+			});
 		});
+		
 	};
 	
 });
@@ -127,6 +134,22 @@ router.post('/newuser',function  (req,res) {
 router.get('/secure/prof',function  (req,res) {
 	console.log('Reques',req.user.name);
 	res.json(req.user.name);
+});
+
+router.get('/verify',function  (req,res) {
+	console.log(req.params);
+	//res.status(200).send(req.query._id);
+	User.findOne({'_id':req.query._id},function  (err,user) {
+		if (err) {
+			res.status(401).send('Some error occured. Please try again');
+		} else {
+			user.verified = true;
+			user.save();
+			console.log(user);
+			res.status(200).send("id verified. <a href='http://blog-shak.rhcloud.com'>Go to the blog</a>");
+			
+		}
+	});
 });
 
 
