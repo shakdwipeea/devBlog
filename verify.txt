@@ -1,1 +1,1 @@
-http://localhost:1337/verify/?_id=544f9307952ba3f86c63f00e
+http://blog-shak.rhcloud.com/verify/?_id=5453df9047965864270d1098

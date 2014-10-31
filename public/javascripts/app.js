@@ -35,7 +35,7 @@ angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loadin
 			controller:'PostController'
 		})
 		.state('addPost',{
-			url:'/addPost',
+			url:'/addPost/:id',
 			templateUrl:'/templates/addPost.ejs',
 			controller:'AddPostController'
 		})

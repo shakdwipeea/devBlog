@@ -1,5 +1,5 @@
 angular.module('BlogApp')
-.factory('authentication',function  ($http,$window,$state,$rootScope) {
+.factory('authentication',function  ($http,$window,$state,$rootScope,alertify) {
 	var auth = {
 		name: '',
 		message: ''
@@ -49,7 +49,7 @@ angular.module('BlogApp')
 		$http
 		.post('/newuser',user)
 		.success(function  (data,status,headers,config) {
-			
+			alertify.alertify.success('A link has been sent to your email. Please verify your account to post');
 		})
 		.error(function  (data,status,headers,config) {
 			// body...

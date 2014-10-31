@@ -1,5 +1,5 @@
 angular.module('BlogApp')
-.factory('Post',function  ($http,$rootScope) {
+.factory('Post',function  ($http,$rootScope,alertify) {
 	var content = {
 		posts: []
 	};
@@ -35,6 +35,25 @@ angular.module('BlogApp')
 		 })
 		 ;
 	}
+
+	content.edit = function  (Post) {
+		// body...
+		$http.post('/secure/edit',Post);
+	}
+
+	content.delete = function  (Post,index) {
+		// body...
+		console.log(Post);
+		$http.post('/secure/delete',Post)
+		.success(function  (data) {		
+		})
+		.error(function  (data) {
+			// body...
+			alertify.alertify.error('Some error occured while deleting your post');
+		});
+	}
+
+
 	return {
 		content: content
 	}

@@ -77,3 +77,43 @@ color:white;
   text-align: center;
   color: yellow;
 }
+
+.icon-holder {
+  padding: 10px;
+}
+
+
+
+.post-preview > div > a {
+  color: #404040;
+}
+.post-preview > div > a:hover,
+.post-preview > div > a:focus {
+  text-decoration: none;
+  color: #0085a1;
+}
+.post-preview > div > a > .post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.post-preview > div > a > .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.post-preview > div > .post-meta {
+  color: #808080;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0;
+}
+.post-preview > div > .post-meta > a {
+  text-decoration: none;
+  color: #404040;
+}
+.post-preview > div > .post-meta > a:hover,
+.post-preview > div > .post-meta > a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}

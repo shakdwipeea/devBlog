@@ -1,0 +1,13 @@
+* Edit Post
+# Users while logged in can view all post on clicking on devBlog
+* Delete post 
+* email id verification required notification
+# Add Search bar
+# Tag support
+# Give every user a space to show off
+# Subscribe to blog posts
+# Add Comments
+# social authentication
+# build a profile
+* make blog posting real time
+# make an http interceptor

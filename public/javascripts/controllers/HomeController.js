@@ -1,21 +1,46 @@
 angular.module('BlogApp')
-.controller('HomeController',function  ($scope,Post) {
-		var cur = 3;
+.controller('HomeController',function  ($scope,Post,alertify,$state,Socket) {
+		$scope.cur = 3;
 		$scope.disable = false;
 
-		$scope.posts = Post.content.posts.slice(0,cur);
+		$scope.posts = Post.content;
 		
+		Socket.on('update',function  () {
+			Post.content.getAll();
+		});
 
 		$scope.loadMore = function  () {
 			// body...
-			cur += 3;
-			if (cur >= Post.content.posts.length) {
+			$scope.cur += 3;
+			if ($scope.cur >= Post.content.posts.length) {
 				$scope.disable = true;
 			};
-			$scope.posts = Post.content.posts.slice(0,cur);
+			
 
 			console.log($scope.disable);
 		}
-		//var d = new Date(Post.content.posts[2].date);
-		//console.log(JSON.parse(Post.content.posts[2].date));
+
+		$scope.editPost = function  (index) {
+			// body...
+			console.log($scope.posts.posts[index]);
+			$state.go('addPost',{id: index});
+		}
+
+		$scope.deletePost = function  (index) {
+			console.log(index);
+			// body...
+			alertify.alertify.confirm('Going to delete').setting({
+				'labels':{ok:'Alright!',cancel:'Naa!'},
+				'onok': function () { 
+					alertify.alertify.success('Deleting Post ..!!');
+					Post.content.delete($scope.posts.posts[index],index);
+				},
+				'oncancel': function() { 
+					alertify.alertify.error('Glad you changed your mind');
+				}
+			});
+			
+		}
+
+		
 });

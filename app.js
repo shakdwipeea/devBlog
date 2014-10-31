@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require('express.io');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 
 
 var app = express();
+app.http().io();
 //Db Connection
 app.set('MongodbHost',process.env.OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
 app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
@@ -22,21 +23,17 @@ app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 }*/
 
 
-mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',{
-  user:'admin',
-  pass:'sS7zTAwzYmwY'
-});
+mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog');
+
+
 require('./models/Posts');
 require('./models/Comments');
 require('./models/Users')
+/*var server = require('./bin/www');
+var io = require('socket.io').listen(server);
+console.log(server);*/
 
-var routes = require('./routes/index');
 var users = require('./routes/users');
-
-
-
-
-
 
 
 // view engine setup
@@ -70,10 +67,10 @@ app.use(function (req, res, next) {
 });
 
 app.use('/secure',expressJwt({secret:'secret'}));
-app.use('/', routes);
+//app.use('/', routes);
 app.use('/users', users);
 
-
+require('./routes/index')(app);
 
 
 // catch 404 and forward to error handler
@@ -106,6 +103,8 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+
 
 
 module.exports = app;
