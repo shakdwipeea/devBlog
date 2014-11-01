@@ -46,7 +46,7 @@ angular.module('BlogApp')
 			
 			result.then(function  (data) {
 				// body..	
-				Socket.on('newPost',function  () {
+				Socket.on('update',function  () {
 					Post.content.getAll();
 				});
 				$state.go('home');

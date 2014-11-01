@@ -69,7 +69,7 @@ module.exports = function  (app) {
 			post.save(function  (err,post) {
 				if (err) {return next(err);}
 				//console.log(io);
-				app.io.broadcast('newPost');
+				app.io.broadcast('update');
 				res.json(post);
 			});
 		}
