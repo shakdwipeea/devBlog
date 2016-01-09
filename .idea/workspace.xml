@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f255beb8-ca75-435d-be42-6cda42b97312" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/README.md" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/float.patch" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" afterPath="" />
@@ -26,26 +24,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder/index.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/README.md" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_duplex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_passthrough.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_readable.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_readable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_transform.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_transform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_writable.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/lib/_stream_writable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/readable.js" afterPath="$PROJECT_DIR$/node_modules/mongoose/node_modules/mongodb/node_modules/readable-stream/readable.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/app.js" afterPath="$PROJECT_DIR$/public/javascripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/PostController.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/PostController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/factories/Authntication.js" afterPath="$PROJECT_DIR$/public/javascripts/factories/Authntication.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/home.ejs" afterPath="$PROJECT_DIR$/public/templates/home.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.txt" afterPath="$PROJECT_DIR$/verify.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/HomeController.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/HomeController.js" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddPostController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js">
+      <file leaf-file-name="HomeController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/HomeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41678727">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5470333">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,6 +67,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/javascripts/controllers/PostController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/controllers/HomeController.js" />
       </list>
     </option>
   </component>
@@ -454,16 +435,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
           <folding>
-            <marker date="1452360607079" expanded="true" signature="211:1288" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="298:479" placeholder="{&quot;url&quot;: '/home'...}" />
-            <marker date="1452360607079" expanded="true" signature="312:389" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="342:384" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="498:558" placeholder="{&quot;url&quot;: '/about'...}" />
-            <marker date="1452360607079" expanded="true" signature="579:643" placeholder="{&quot;url&quot;: '/contact'...}" />
-            <marker date="1452360607079" expanded="true" signature="663:759" placeholder="{&quot;url&quot;: '/signin'...}" />
-            <marker date="1452360607079" expanded="true" signature="777:871" placeholder="{&quot;url&quot;: '/post/:id'...}" />
-            <marker date="1452360607079" expanded="true" signature="892:995" placeholder="{&quot;url&quot;: '/addPost/:id'...}" />
-            <marker date="1452360607079" expanded="true" signature="1015:1111" placeholder="{&quot;url&quot;: '/signup'...}" />
+            <marker date="1452364748711" expanded="true" signature="211:1402" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="298:479" placeholder="{&quot;url&quot;: '/home'...}" />
+            <marker date="1452364748711" expanded="true" signature="312:389" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="342:384" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="498:593" placeholder="{&quot;url&quot;: '/:userName'...}" />
+            <marker date="1452364748711" expanded="true" signature="612:672" placeholder="{&quot;url&quot;: '/about'...}" />
+            <marker date="1452364748711" expanded="true" signature="693:757" placeholder="{&quot;url&quot;: '/contact'...}" />
+            <marker date="1452364748711" expanded="true" signature="777:873" placeholder="{&quot;url&quot;: '/signin'...}" />
+            <marker date="1452364748711" expanded="true" signature="891:985" placeholder="{&quot;url&quot;: '/post/:id'...}" />
+            <marker date="1452364748711" expanded="true" signature="1006:1109" placeholder="{&quot;url&quot;: '/addPost/:id'...}" />
+            <marker date="1452364748711" expanded="true" signature="1129:1225" placeholder="{&quot;url&quot;: '/signup'...}" />
           </folding>
         </state>
       </provider>
@@ -504,25 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20839363">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <marker date="1452360607079" expanded="true" signature="211:1288" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="298:479" placeholder="{&quot;url&quot;: '/home'...}" />
-            <marker date="1452360607079" expanded="true" signature="312:389" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="342:384" placeholder="{...}" />
-            <marker date="1452360607079" expanded="true" signature="498:558" placeholder="{&quot;url&quot;: '/about'...}" />
-            <marker date="1452360607079" expanded="true" signature="579:643" placeholder="{&quot;url&quot;: '/contact'...}" />
-            <marker date="1452360607079" expanded="true" signature="663:759" placeholder="{&quot;url&quot;: '/signin'...}" />
-            <marker date="1452360607079" expanded="true" signature="777:871" placeholder="{&quot;url&quot;: '/post/:id'...}" />
-            <marker date="1452360607079" expanded="true" signature="892:995" placeholder="{&quot;url&quot;: '/addPost/:id'...}" />
-            <marker date="1452360607079" expanded="true" signature="1015:1111" placeholder="{&quot;url&quot;: '/signup'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -535,14 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/HomeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -607,6 +562,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/post.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39073807">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1452352417623" expanded="false" signature="136:180" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="181:698" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="213:684" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="243:669" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="324:650" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="371:627" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="739:983" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="771:968" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="801:953" placeholder="..." />
+            <marker date="1452352417623" expanded="true" signature="910:934" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/SignInController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -614,6 +588,64 @@
           <folding>
             <marker date="1452352417619" expanded="true" signature="105:258" placeholder="{...}" />
             <marker date="1452352417619" expanded="true" signature="149:256" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/PostController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28654125">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1452362621987" expanded="true" signature="92:438" placeholder="{...}" />
+            <marker date="1452362621987" expanded="true" signature="246:436" placeholder="{...}" />
+            <marker date="1452362621987" expanded="true" signature="356:429" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41678727">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <marker date="1452364151607" expanded="true" signature="120:1800" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="224:277" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="284:693" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="361:439" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="411:434" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="445:464" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="487:685" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="724:1794" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="816:864" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="870:1790" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="996:1318" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1020:1214" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1253:1288" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1324:1725" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1363:1500" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1539:1657" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1592:1627" placeholder="{...}" />
+            <marker date="1452364151607" expanded="true" signature="1675:1718" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/factories/Socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1452352417619" expanded="true" signature="45:535" placeholder="[...]" />
+            <marker date="1452352417619" expanded="true" signature="80:534" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="118:532" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="157:290" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="195:285" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="232:278" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="337:529" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="384:524" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="446:517" placeholder="{...}" />
+            <marker date="1452352417619" expanded="true" signature="467:511" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -642,41 +674,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/post.ejs">
+    <entry file="file://$PROJECT_DIR$/public/templates/home.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39073807">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452352417623" expanded="false" signature="136:180" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="181:698" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="213:684" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="243:669" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="324:650" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="371:627" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="739:983" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="771:968" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="801:953" placeholder="..." />
-            <marker date="1452352417623" expanded="true" signature="910:934" placeholder="..." />
+            <marker date="1452357008883" expanded="false" signature="136:187" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="188:665" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="220:651" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="250:636" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="331:617" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="378:594" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="720:2311" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="746:2300" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="823:2285" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="916:1966" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="958:1459" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1024:1324" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1074:1165" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1218:1295" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1519:1923" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1598:1694" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="1775:1871" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="2088:2266" placeholder="..." />
+            <marker date="1452357008883" expanded="true" signature="2126:2244" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/PostController.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28654125">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.44283646">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
           <folding>
-            <marker date="1452362621987" expanded="true" signature="92:438" placeholder="{...}" />
-            <marker date="1452362621987" expanded="true" signature="246:436" placeholder="{...}" />
-            <marker date="1452362621987" expanded="true" signature="356:429" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="211:1402" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="298:479" placeholder="{&quot;url&quot;: '/home'...}" />
+            <marker date="1452364748711" expanded="true" signature="312:389" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="342:384" placeholder="{...}" />
+            <marker date="1452364748711" expanded="true" signature="498:593" placeholder="{&quot;url&quot;: '/:userName'...}" />
+            <marker date="1452364748711" expanded="true" signature="612:672" placeholder="{&quot;url&quot;: '/about'...}" />
+            <marker date="1452364748711" expanded="true" signature="693:757" placeholder="{&quot;url&quot;: '/contact'...}" />
+            <marker date="1452364748711" expanded="true" signature="777:873" placeholder="{&quot;url&quot;: '/signin'...}" />
+            <marker date="1452364748711" expanded="true" signature="891:985" placeholder="{&quot;url&quot;: '/post/:id'...}" />
+            <marker date="1452364748711" expanded="true" signature="1006:1109" placeholder="{&quot;url&quot;: '/addPost/:id'...}" />
+            <marker date="1452364748711" expanded="true" signature="1129:1225" placeholder="{&quot;url&quot;: '/signup'...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/AddPostController.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/HomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41678727">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5470333">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

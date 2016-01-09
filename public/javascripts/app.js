@@ -16,6 +16,11 @@ angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loadin
 			templateUrl:'/templates/home.ejs',
 			controller:'HomeController'
 		})
+		.state('view', {
+			url:'/:userName',
+			templateUrl:'/templates/home.ejs',
+			controller:'HomeController'
+		})
 		.state('about',{
 			url:'/about',
 			templateUrl:'/templates/about.ejs'
