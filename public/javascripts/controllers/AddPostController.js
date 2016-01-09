@@ -7,9 +7,23 @@ angular.module('BlogApp')
 		$scope.disable = false;
 	} else  {
 		console.log(Post.content.posts);
-		$scope.title = Post.content.posts[$stateParams.id].title;
-		$scope.subtitle = Post.content.posts[$stateParams.id].subtitle;
-		$scope.content = Post.content.posts[$stateParams.id].content;
+
+		if (Post.content.posts.length === 0) {
+			Post.content.getAll()
+				.then(function  () {
+					publish();
+				})
+		} else {
+			publish();
+		}
+
+		function publish() {
+			$scope.title = Post.content.posts[$stateParams.id].title;
+			$scope.subtitle = Post.content.posts[$stateParams.id].subtitle;
+			$scope.content = Post.content.posts[$stateParams.id].content;
+		};
+
+		
 	}
 	
 	$scope.post = function  () {

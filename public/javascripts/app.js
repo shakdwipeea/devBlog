@@ -1,7 +1,7 @@
 angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loading-bar','ngAnimate'])
 
 
-.config(function  ($stateProvider,$urlRouterProvider,$httpProvider,cfpLoadingBarProvider) {
+.config(function  ($stateProvider,$urlRouterProvider,$httpProvider,cfpLoadingBarProvider,$locationProvider) {
 	// body...
 	$urlRouterProvider.otherwise('/home');
 
@@ -30,7 +30,7 @@ angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loadin
 			controller:'SignInController'
 		})
 		.state('post',{
-			url:'/posts/:id',
+			url:'/post/:id',
 			templateUrl:'/templates/post.ejs',
 			controller:'PostController'
 		})
@@ -49,4 +49,7 @@ angular.module('BlogApp',['ui.router','textAngular','ngSanitize','angular-loadin
 
 		 cfpLoadingBarProvider.includeSpinner = false;
 
+		 $locationProvider.html5Mode(true);
+
+		 console.log("He,llo");
 });

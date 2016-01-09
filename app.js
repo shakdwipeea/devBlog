@@ -14,8 +14,8 @@ var mongoose = require('mongoose');
 var app = express();
 app.http().io();
 //Db Connection
-app.set('MongodbHost',process.env.OPENSHIFT_MONGODB_DB_HOST || '127.0.0.1');
-app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
+app.set('MongodbHost','127.0.0.1');
+app.set('MongodbPort','');
 
 /*{
   user:'admin',
@@ -23,10 +23,7 @@ app.set('MongodbPort',process.env.OPENSHIFT_MONGODB_DB_PORT || '');
 }*/
 
 
-mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog',{
-  user:'admin',
-  pass:'sS7zTAwzYmwY'
-});
+mongoose.connect('mongodb://' + app.get('MongodbHost') + ':' + app.get('MongodbPort') + '/blog');
 
 
 require('./models/Posts');
@@ -75,6 +72,9 @@ app.use('/users', users);
 
 require('./routes/index')(app);
 
+app.get('*', function  (req, res, next) {
+    res.render('index');
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

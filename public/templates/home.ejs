@@ -20,7 +20,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="row post-preview" ng-repeat="post in posts.posts | limitTo:cur">
                    <div class="col-md-8">
-                        <a class="posts" href="#/posts/{{$index}}">
+                        <a class="posts" href="/post/{{$index}}">
                           <h2 class="post-title">
                             {{post.title}}               
                            </h2>
@@ -28,7 +28,7 @@
                            {{post.subtitle}}
                           </h3>
                         </a>
-                        <p class="post-meta">Posted by <a href="#">{{post.author}}</a> on {{post.date}}</p>
+                        <p class="post-meta">Posted by <a href="/">{{post.author}}</a> on {{post.date}}</p>
                     </div>
 
                     <div class="col-md-2 col-md-offset-2">
